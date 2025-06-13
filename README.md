@@ -1,4 +1,3 @@
-# Проектная работа Mesto
-https://github.com/f7beU/mesto-project-ff.git
+"Проект собран на Webpack. Конфиг адаптирован из учебного проекта Mesto (Яндекс.Практикум). Использовал элементы вёрстки из Mesto."
 
-https://f7beu.github.io/mesto-project-ff/
+https://github.com/f7beU/array-analyzer.git
