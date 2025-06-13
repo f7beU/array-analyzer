@@ -1,89 +1,82 @@
 import "./index.css";
 
-const input = document.querySelector(".popup__input")
-const addButton = document.querySelector("#add-button")
-const sumButton = document.querySelector("#sum-button")
-const minButton = document.querySelector("#min-button")
-const maxButton = document.querySelector("#max-button")
-const averageButton = document.querySelector("#average-button")
-const lengthButton = document.querySelector("#length-button")
+const input = document.querySelector(".popup__input");
+const addButton = document.querySelector("#add-button");
+const resetButton = document.querySelector("#reset-button");
+const sumButton = document.querySelector("#sum-button");
+const minButton = document.querySelector("#min-button");
+const maxButton = document.querySelector("#max-button");
+const averageButton = document.querySelector("#average-button");
+const lengthButton = document.querySelector("#length-button");
 
-const result = document.querySelector("#result")
+const result = document.querySelector("#result");
 
-
-let array = []
+let array = [];
+let analizer;
 
 addButton.addEventListener("click", () => {
-  array = input.value.split(',').map(Number)
-  // console.log(array)
-  return array
-})
+  array = input.value.split(",").map(Number);
+  analizer = new Analyze(array);
+  return array;
+});
+
+resetButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  input.value = "";
+  result.textContent = "";
+});
 
 sumButton.addEventListener("click", () => {
-  const analizer = new Analyze(array)
-  result.textContent = analizer.sum
-  console.log(analizer.sum)
-})
+  result.textContent = analizer.sum;
+  console.log(analizer.sum);
+});
 
 minButton.addEventListener("click", () => {
-  const analizer = new Analyze(array)
-  result.textContent = analizer.min
-  console.log(analizer.min)
-})
+  result.textContent = analizer.min;
+  console.log(analizer.min);
+});
 
 maxButton.addEventListener("click", () => {
-  const analizer = new Analyze(array)
-  result.textContent = analizer.max
-  console.log(analizer.max)
-})
+  result.textContent = analizer.max;
+  console.log(analizer.max);
+});
 
 averageButton.addEventListener("click", () => {
-  const analizer = new Analyze(array)
-  result.textContent = analizer.average
-  console.log(analizer.average)
-})
+  result.textContent = analizer.average;
+  console.log(analizer.average);
+});
 
 lengthButton.addEventListener("click", () => {
-  const analizer = new Analyze(array)
-  result.textContent = analizer.length
-  console.log(analizer.length)
-})
+  result.textContent = analizer.length;
+  console.log(analizer.length);
+});
 
 class Analyze {
   constructor(array) {
-      this.array = array;
+    this.array = array;
   }
   get sum() {
-      return this.array.reduce(((acc, item) => acc += item), 0);
+    return this.array.reduce((acc, item) => (acc += item), 0);
   }
   get length() {
-      return this.array.length;
+    return this.array.length;
   }
   get average() {
-      return this.sum / this.length;
+    return (this.sum / this.length).toFixed(2);
   }
   get min() {
-      let res = this.array.sort((a, b) => a - b);
-      return res[0];
+    return Math.min(...this.array);
   }
   get max() {
-      let res = this.array.sort((a, b) => a - b);
-      return res[this.array.length - 1];
+    return Math.max(...this.array);
   }
   checkArr() {
-      if (this.array.length === 0) {
-          return 'even';
-      }
-      return this.sum % 2 === 0 ? 'even' : 'odd';
+    if (this.array.length === 0) {
+      return "even";
+    }
+    return this.sum % 2 === 0 ? "even" : "odd";
   }
 }
-
-
-
-
-
-
-
 
 // import { createCard, deleteCard, likeButtonJob } from "./components/card.js";
 // import { openPopup, closePopup } from "./components/modal.js";

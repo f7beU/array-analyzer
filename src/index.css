@@ -183,6 +183,10 @@
   margin-top: 30px;
 }
 
+.reset__button {
+  background: red;
+}
+
 .popup__button:invalid {
   background: white;
 }
