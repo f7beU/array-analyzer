@@ -1,6 +1,6 @@
 import "./index.css";
 
-const input = document.querySelector(".popup__input");
+const input = document.querySelector("#numbers-input");
 const addButton = document.querySelector("#add-button");
 const resetButton = document.querySelector("#reset-button");
 const sumButton = document.querySelector("#sum-button");
@@ -15,7 +15,16 @@ let array = [];
 let analizer;
 
 addButton.addEventListener("click", () => {
-  array = input.value.split(",").map(Number);
+  array = input.value.split(",").map(num => parseFloat(num.trim()));
+  console.log(array);
+  if (array[0] === 0) {
+    // console.log('Введите значение')
+    result.textContent = "Введите значения элементов массива";
+  }
+  if (array.includes(NaN)) {
+    // console.log("Все элементы массива должны быть числами")
+    result.textContent = "Все элементы массива должны быть числами";
+  }
   analizer = new Analyze(array);
   return array;
 });
