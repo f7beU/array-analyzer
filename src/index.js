@@ -1,91 +1,91 @@
-import "./index.css";
+// import "./index.css";
 
-const input = document.querySelector("#numbers-input");
-const addButton = document.querySelector("#add-button");
-const resetButton = document.querySelector("#reset-button");
-const sumButton = document.querySelector("#sum-button");
-const minButton = document.querySelector("#min-button");
-const maxButton = document.querySelector("#max-button");
-const averageButton = document.querySelector("#average-button");
-const lengthButton = document.querySelector("#length-button");
+// const input = document.querySelector("#numbers-input");
+// const addButton = document.querySelector("#add-button");
+// const resetButton = document.querySelector("#reset-button");
+// const sumButton = document.querySelector("#sum-button");
+// const minButton = document.querySelector("#min-button");
+// const maxButton = document.querySelector("#max-button");
+// const averageButton = document.querySelector("#average-button");
+// const lengthButton = document.querySelector("#length-button");
 
-const result = document.querySelector("#result");
+// const result = document.querySelector("#result");
 
-let array = [];
-let analizer;
+// let array = [];
+// let analizer;
 
-addButton.addEventListener("click", () => {
-  array = input.value.split(",").map(num => parseFloat(num.trim()));
-  console.log(array);
-  if (array[0] === 0) {
-    // console.log('Введите значение')
-    result.textContent = "Введите значения элементов массива";
-  }
-  if (array.includes(NaN)) {
-    // console.log("Все элементы массива должны быть числами")
-    result.textContent = "Все элементы массива должны быть числами";
-  }
-  analizer = new Analyze(array);
-  return array;
-});
+// addButton.addEventListener("click", () => {
+//   array = input.value.split(",").map(num => parseFloat(num.trim()));
+//   console.log(array);
+//   if (array[0] === 0) {
+//     // console.log('Введите значение')
+//     result.textContent = "Введите значения элементов массива";
+//   }
+//   if (array.includes(NaN)) {
+//     // console.log("Все элементы массива должны быть числами")
+//     result.textContent = "Все элементы массива должны быть числами";
+//   }
+//   analizer = new Analyze(array);
+//   return array;
+// });
 
-resetButton.addEventListener("click", (event) => {
-  event.preventDefault();
-  input.value = "";
-  result.textContent = "";
-});
+// resetButton.addEventListener("click", (event) => {
+//   event.preventDefault();
+//   input.value = "";
+//   result.textContent = "";
+// });
 
-sumButton.addEventListener("click", () => {
-  result.textContent = analizer.sum;
-  console.log(analizer.sum);
-});
+// sumButton.addEventListener("click", () => {
+//   result.textContent = analizer.sum;
+//   console.log(analizer.sum);
+// });
 
-minButton.addEventListener("click", () => {
-  result.textContent = analizer.min;
-  console.log(analizer.min);
-});
+// minButton.addEventListener("click", () => {
+//   result.textContent = analizer.min;
+//   console.log(analizer.min);
+// });
 
-maxButton.addEventListener("click", () => {
-  result.textContent = analizer.max;
-  console.log(analizer.max);
-});
+// maxButton.addEventListener("click", () => {
+//   result.textContent = analizer.max;
+//   console.log(analizer.max);
+// });
 
-averageButton.addEventListener("click", () => {
-  result.textContent = analizer.average;
-  console.log(analizer.average);
-});
+// averageButton.addEventListener("click", () => {
+//   result.textContent = analizer.average;
+//   console.log(analizer.average);
+// });
 
-lengthButton.addEventListener("click", () => {
-  result.textContent = analizer.length;
-  console.log(analizer.length);
-});
+// lengthButton.addEventListener("click", () => {
+//   result.textContent = analizer.length;
+//   console.log(analizer.length);
+// });
 
-class Analyze {
-  constructor(array) {
-    this.array = array;
-  }
-  get sum() {
-    return this.array.reduce((acc, item) => (acc += item), 0);
-  }
-  get length() {
-    return this.array.length;
-  }
-  get average() {
-    return (this.sum / this.length).toFixed(2);
-  }
-  get min() {
-    return Math.min(...this.array);
-  }
-  get max() {
-    return Math.max(...this.array);
-  }
-  checkArr() {
-    if (this.array.length === 0) {
-      return "even";
-    }
-    return this.sum % 2 === 0 ? "even" : "odd";
-  }
-}
+// class Analyze {
+//   constructor(array) {
+//     this.array = array;
+//   }
+//   get sum() {
+//     return this.array.reduce((acc, item) => (acc += item), 0);
+//   }
+//   get length() {
+//     return this.array.length;
+//   }
+//   get average() {
+//     return (this.sum / this.length).toFixed(2);
+//   }
+//   get min() {
+//     return Math.min(...this.array);
+//   }
+//   get max() {
+//     return Math.max(...this.array);
+//   }
+//   checkArr() {
+//     if (this.array.length === 0) {
+//       return "even";
+//     }
+//     return this.sum % 2 === 0 ? "even" : "odd";
+//   }
+// }
 
 // import { createCard, deleteCard, likeButtonJob } from "./components/card.js";
 // import { openPopup, closePopup } from "./components/modal.js";

@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: {
-    main: "./src/index.js",
+    main: "./src/index.ts",
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -22,8 +22,8 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
-        use: "babel-loader",
+        test: /\.ts$/,
+        use: "ts-loader",
         exclude: "/node_modules/",
       },
       {
@@ -52,4 +52,11 @@ module.exports = {
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(),
   ],
+  resolve: {
+    extensions: ['.ts', '.js'],
+  },
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+  },
 };
