@@ -6,17 +6,19 @@ const resetButton: HTMLButtonElement = document.querySelector("#reset-button")!;
 const sumButton: HTMLButtonElement = document.querySelector("#sum-button")!;
 const minButton: HTMLButtonElement = document.querySelector("#min-button")!;
 const maxButton: HTMLButtonElement = document.querySelector("#max-button")!;
-const averageButton: HTMLButtonElement = document.querySelector("#average-button")!;
-const lengthButton: HTMLButtonElement = document.querySelector("#length-button")!;
+const averageButton: HTMLButtonElement =
+  document.querySelector("#average-button")!;
+const lengthButton: HTMLButtonElement =
+  document.querySelector("#length-button")!;
 
 const result: HTMLDivElement = document.querySelector("#result")!;
 
 let array: number[] = [];
-let analizer: Analyze;
+let analyzer: Analyze;
 
 addButton.addEventListener("click", (event: MouseEvent) => {
-  array = input.value.split(",").map(num => parseFloat(num.trim()));
-  console.log(array);
+  array = input.value.split(",").map((num) => parseFloat(num.trim()));
+  // console.log(array);
   if (array[0] === 0) {
     // console.log('Введите значение')
     result.textContent = "Введите значения элементов массива отличные от 0";
@@ -25,7 +27,7 @@ addButton.addEventListener("click", (event: MouseEvent) => {
     // console.log("Все элементы массива должны быть числами")
     result.textContent = "Все элементы массива должны быть числами";
   }
-  analizer = new Analyze(array);
+  analyzer = new Analyze(array);
   return array;
 });
 
@@ -36,28 +38,28 @@ resetButton.addEventListener("click", (event) => {
 });
 
 sumButton.addEventListener("click", (event: MouseEvent) => {
-  result.textContent = String(analizer.sum);
-  console.log(analizer.sum);
+  result.textContent = String(analyzer.sum);
+  console.log(analyzer.sum);
 });
 
 minButton.addEventListener("click", (event: MouseEvent) => {
-  result.textContent = String(analizer.min);
-  console.log(analizer.min);
+  result.textContent = String(analyzer.min);
+  console.log(analyzer.min);
 });
 
 maxButton.addEventListener("click", (event: MouseEvent) => {
-  result.textContent = String(analizer.max);
-  console.log(analizer.max);
+  result.textContent = String(analyzer.max);
+  console.log(analyzer.max);
 });
 
 averageButton.addEventListener("click", (event: MouseEvent) => {
-  result.textContent = analizer.average;
-  console.log(analizer.average);
+  result.textContent = analyzer.average;
+  console.log(analyzer.average);
 });
 
 lengthButton.addEventListener("click", (event: MouseEvent) => {
-  result.textContent = String(analizer.length);
-  console.log(analizer.length);
+  result.textContent = String(analyzer.length);
+  console.log(analyzer.length);
 });
 
 class Analyze {

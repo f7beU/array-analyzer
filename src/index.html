@@ -1,6 +1,3 @@
-<!-- Вёрстка адаптирована из учебного проекта Mesto(Яндекс Практикум).
-  TODO: Переименовать классы и доработать стили. -->
-
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -25,24 +22,14 @@
             id="numbers-input"
             placeholder="Введите числа через запятую"
           />
-          <button id="add-button" class="button">
-            Запомнить массив
-          </button>
+          <button id="add-button" class="button">Запомнить массив</button>
           <button id="reset-button" class="reset__button">
             Сбросить массив
           </button>
-          <button id="sum-button" class="button">
-            Сумма всех значений
-          </button>
-          <button id="min-button" class="button">
-            Минимальное значение
-          </button>
-          <button id="max-button" class="button">
-            Максимальное значение
-          </button>
-          <button id="average-button" class="button">
-            Среднее значение
-          </button>
+          <button id="sum-button" class="button">Сумма всех значений</button>
+          <button id="min-button" class="button">Минимальное значение</button>
+          <button id="max-button" class="button">Максимальное значение</button>
+          <button id="average-button" class="button">Среднее значение</button>
           <button id="length-button" class="button">
             Количество элементов массива
           </button>
@@ -52,147 +39,3 @@
     </div>
   </body>
 </html>
-<!-- <input type="text" id="numbers-input" placeholder="Введите числа через запятую">
-      <button id="add-button">Добавить</button>
-      <button id="analyze-button">Анализ</button>
-       <div id="result"></div> -->
-<!-- <script src="analyzer.js"></script> -->
-
-<!-- <main class="content"> -->
-<!-- <section class="profile page__section"> -->
-<!-- <div > -->
-<!-- <img src="" alt="Фото в профиле" class="profile__image"> -->
-<!-- </div> -->
-<!-- <div class="profile__info">
-            <h1 class="profile__title"></h1>
-            <button class="profile__edit-button" type="button"></button>
-            <p class="profile__description"></p>
-          </div>
-          <button class="profile__add-button" type="button"></button>
-        </section>
-        <section class="places page__section">
-          <ul class="places__list"></ul>
-        </section>
-      </main>
-      <footer class="footer page__section">
-        <p class="footer__copyright">© 2021 Mesto Russia</p>
-      </footer>
-      <div class="popup popup_type_edit">
-        <div class="popup__content">
-          <button type="button" class="popup__close"></button>
-          <h3 class="popup__title">Редактировать профиль</h3>
-          <form class="popup__form" name="edit-profile" novalidate>
-            <input
-              id="name-input"
-              type="text"
-              name="name"
-              minlength="2"
-              maxlength="40"
-              pattern="[a-zA-Zа-яА-ЯЁё\s\-]+"
-              data-error-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы"
-              class="popup__input popup__input_type_name"
-              placeholder="Имя"
-              required
-            />
-            <span class="name-input-error form__input-error"></span>
-            <input
-              id="description-input"
-              type="text"
-              name="description"
-              minlength="2"
-              maxlength="200"
-              pattern="[a-zA-Zа-яА-ЯЁё\s\-]+"
-              data-error-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы"
-              class="popup__input popup__input_type_description"
-              placeholder="О себе"
-              required
-            />
-            <span class="description-input-error form__input-error"></span>
-            <button type="submit" class="button popup__button">
-              Сохранить
-            </button>
-          </form>
-        </div>
-      </div>
-      <div class="popup popup_type_new-card">
-        <div class="popup__content">
-          <button type="button" class="popup__close"></button>
-          <h3 class="popup__title">Новое место</h3>
-          <form class="popup__form" name="new-place" novalidate>
-            <input
-              id="place-name-input"
-              type="text"
-              name="place-name"
-              minlength="2"
-              maxlength="30"
-              pattern="[a-zA-Zа-яА-ЯЁё\s\-]+"
-              data-error-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы"
-              class="popup__input popup__input_type_card-name"
-              placeholder="Название"
-              required
-            />
-            <span class="place-name-input-error form__input-error"></span>
-            <input
-              id="link-input"
-              type="url"
-              name="link"
-              class="popup__input popup__input_type_url"
-              placeholder="Ссылка на картинку"
-              required
-            />
-            <span class="link-input-error form__input-error"></span>
-            <button type="submit" class="button popup__button">
-              Сохранить
-            </button>
-          </form>
-        </div>
-      </div> -->
-
-<!-- <div class="popup popup_type_new-avatar">
-        <div class="popup__content">
-          <button type="button" class="popup__close"></button>
-          <h3 class="popup__title">Обновить аватар</h3>
-          <form class="popup__form" name="link-new-foto" novalidate>
-            <input
-              id="link-input"
-              type="url"
-             
-              name="link"
-              class="popup__input popup__input_type_url"
-              placeholder="Ссылка на аватар"
-              required
-            />
-            <span class="link-input-error form__input-error"></span>
-            <button type="submit" class="button popup__button">
-              Сохранить
-            </button>
-          </form>
-        </div>
-      </div> -->
-
-<!-- <div class="popup popup_type_image">
-        <div class="popup__content popup__content_content_image">
-          <button type="button" class="popup__close"></button>
-          <img src="" alt="" class="popup__image" />
-          <p class="popup__caption"></p>
-        </div>
-      </div>
-    </div> -->
-<!-- <script src="./scripts/cards.js"></script>
-<script src="./scripts/index.js" defer></script> -->
-
-<!-- <template id="card-template">
-      <li class="places__item card">
-        <img class="card__image" src="" alt="" />
-        <button type="button" class="card__delete-button"></button>
-        <div class="card__description">
-          <h2 class="card__title"></h2>
-          <div class="like__block">
-            <button type="button" class="card__like-button"></button>
-            <div class="likes__counter">0</div>
-          </div>
-        </div>
-      </li>
-    </template> -->
-<!-- </body>
-</html> -->

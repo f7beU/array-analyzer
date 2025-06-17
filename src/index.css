@@ -1,18 +1,3 @@
-/* @import url('./vendor/normalize.css');
-@import url('./vendor/fonts.css');
-@import url('./blocks/page/page.css');
-@import url('./blocks/header/header.css');
-@import url('./blocks/content/content.css');
-@import url('./blocks/footer/footer.css');
-@import url('./blocks/profile/profile.css');
-@import url('./blocks/places/places.css');
-@import url('./blocks/card/card.css');
-@import url('./blocks/popup/popup.css');
-@import url('./blocks/popup/_is-animated/popup_is-animated.css');
-@import url('./blocks/popup/_is-opened/popup_is-opened.css'); */
-
-
-
 .page {
   background: #000;
 }
@@ -28,28 +13,12 @@
 
 .header {
   min-height: 60px;
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: "Inter", Arial, sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
-
-/* .header::before {
-  content: '';
-  width: 100%;
-  height: 1px;
-  opacity: 0.7;
-  background: #545454;
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
-  bottom: 0;
-} */
 
 @media screen and (max-width: 480px) {
   .header {
@@ -98,11 +67,11 @@
 }
 
 .popup {
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: "Inter", Arial, sans-serif;
   display: none;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
   left: 0;
@@ -136,25 +105,21 @@
   height: 40px;
   text-align: center;
   border: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   font-size: 14px;
   line-height: 18px;
   box-sizing: border-box;
-  /* padding: 10px 0 0; */
-  /* margin-bottom: 10px; */
 }
 
 .form__input_type_error {
   border-bottom: 1px solid rgba(255, 0, 0);
   /* Нижняя рамка становится красной всякий раз, 
   когда введённые данные некорректны */
-} 
+}
 
 .form__input-error {
   color: red;
 }
-
-
 
 .input:last-of-type {
   margin-bottom: 0;
@@ -212,7 +177,6 @@
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-
 .button:hover {
   background: rgba(0, 0, 0, 0.8);
   cursor: pointer;
@@ -230,17 +194,14 @@
   line-height: 22px;
   text-align: center;
   grid-area: description;
-  /* margin: 0; */
   width: 100%;
   height: 40px;
-  /* border: 0; */
   border: 2px solid green;
   font-size: 14px;
   line-height: 18px;
   box-sizing: border-box;
   padding: 10px 0 0;
   margin-top: 30px;
-  /* margin-bottom: 10px; */
 }
 
 @media screen and (max-width: 568px) {
